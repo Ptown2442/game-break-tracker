@@ -15,7 +15,7 @@ import Spinner from "@/app/Components/Spinner";
 
 type IssueForm = z.infer<typeof createIssueSchema>;
 
-const simpleMDE = dynamic(() => import("react-simplemde-editor"), {
+const SimpleMDE = dynamic(() => import("react-simplemde-editor"), {
   ssr: false,
 });
 
