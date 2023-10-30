@@ -1,7 +1,7 @@
 "use client";
 
 import { Button, Callout, TextField } from "@radix-ui/themes";
-import dynamic from "next/dynamic";
+import SimpleMDE from "react-simplemde-editor";
 import { useForm, Controller } from "react-hook-form";
 import axios from "axios";
 import "easymde/dist/easymde.min.css";
@@ -15,10 +15,6 @@ import Spinner from "@/app/Components/Spinner";
 import { Issue } from "@prisma/client";
 
 type IssueFormData = z.infer<typeof issueSchema>;
-
-const SimpleMDE = dynamic(() => import("react-simplemde-editor"), {
-  ssr: false,
-});
 
 const IssueForm = ({ issue }: { issue?: Issue }) => {
   const [error, setError] = useState("");
