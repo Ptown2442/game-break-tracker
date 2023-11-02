@@ -21,3 +21,9 @@ body {
   
  
 }
+
+@layer utilities {
+  .nav-link {
+    @apply text-blue-300 hover: text-zinc-500 transition-colors
+  }
+}
